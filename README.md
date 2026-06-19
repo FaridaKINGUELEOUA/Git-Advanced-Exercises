@@ -143,4 +143,17 @@ $ git rebase -i HEAD~2
 Successfully rebased and updated refs/heads/main.
 
 Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git rebase -i HEAD~3
+[detached HEAD bd3e666] chore: Create initial and second files
+ Date: Fri Jun 19 14:59:43 2026 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.md
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git log --oneline
+c61fa9c (HEAD -> main) chore:Create third and fourth files
+bd3e666 chore: Create initial and second files
+07725c6 (origin/main, origin/HEAD) Initial commit
 ```
