@@ -83,8 +83,28 @@ Date:   Fri Jun 19 14:59:43 2026 +0200
 commit 07725c610de1c1568ce2363bf49405d70a099bce (origin/main, origin/HEAD)
 Author: FaridaKINGUELEOUA <fanekingue@gmail.com>
 Date:   Fri Jun 19 14:52:27 2026 +0200
-```
-
     Initial commit
 ~
 (END)
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git add test4.md
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git commit --amend -m "chore:Create third and fourth files"
+[main f19fa6a] chore:Create third and fourth files
+ Date: Fri Jun 19 15:00:03 2026 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$
+```
