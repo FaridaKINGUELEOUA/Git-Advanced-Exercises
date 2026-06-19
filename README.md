@@ -127,6 +127,7 @@ Your branch is ahead of 'origin/main' by 3 commits.
 
 nothing to commit, working tree clean
 
+ 3.Squashing Commits
 Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
 $ git log --oneline
 f19fa6a (HEAD -> main) chore:Create third and fourth files
@@ -154,6 +155,38 @@ Successfully rebased and updated refs/heads/main.
 Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
 $ git log --oneline
 c61fa9c (HEAD -> main) chore:Create third and fourth files
+bd3e666 chore: Create initial and second files
+07725c6 (origin/main, origin/HEAD) Initial commit
+
+4. Splitting a commit
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git reset --soft HEAD~1
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git reset
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git add test3.md
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git commit -m "Create third file"
+[main cf1960f] Create third file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git add test4.md
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git commit -m "Create fourth file"
+[main d2130ff] Create fourth file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test4.md
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git log --oneline
+d2130ff (HEAD -> main) Create fourth file
+cf1960f Create third file
 bd3e666 chore: Create initial and second files
 07725c6 (origin/main, origin/HEAD) Initial commit
 ```
