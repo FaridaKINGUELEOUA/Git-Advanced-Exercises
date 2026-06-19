@@ -1,7 +1,7 @@
 # Git-Advanced-Exercises
 Getting started
 Part 1: Refining Git History (10 Challenges)
-Missing File Fix
+1.Missing File Fix
 
 ```bash
 Nettie King@Nettie-Win MINGW64 ~
@@ -107,4 +107,40 @@ nothing to commit, working tree clean
 
 Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
 $
+2. Editing commit history
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git add test4.md
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git commit --amend -m "chore:Create third and fourth files"
+[main f19fa6a] chore:Create third and fourth files
+ Date: Fri Jun 19 15:00:03 2026 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git log --oneline
+f19fa6a (HEAD -> main) chore:Create third and fourth files
+0a85d1c chore: Create another file
+496b9f0 chore: Create initial file
+07725c6 (origin/main, origin/HEAD) Initial commit
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git rebase -i HEAD~2
+[detached HEAD df08c19] chore: Create a second file
+ Date: Fri Jun 19 14:59:53 2026 +0200
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
 ```
