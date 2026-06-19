@@ -189,4 +189,20 @@ d2130ff (HEAD -> main) Create fourth file
 cf1960f Create third file
 bd3e666 chore: Create initial and second files
 07725c6 (origin/main, origin/HEAD) Initial commit
+
+5. Advanced Squashing
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git rebase -i HEAD~2
+[detached HEAD eae3eed] Create third and fourth files
+ Date: Fri Jun 19 15:38:06 2026 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+Successfully rebased and updated refs/heads/main.
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git log --oneline
+eae3eed (HEAD -> main) Create third and fourth files
+bd3e666 chore: Create initial and second files
+07725c6 (origin/main, origin/HEAD) Initial commit
 ```
