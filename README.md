@@ -319,4 +319,33 @@ $ git cherry-pick 9d33e94
  Date: Mon Jun 22 13:52:28 2026 +0200
  1 file changed, 1 insertion(+)
  create mode 100644 test5.md
+
+Part 2:Branching Basics (10 Challenges)
+1. Feature Branch Creation
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git switch -c ft/new-feature
+Switched to a new branch 'ft/new-feature'
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (ft/new-feature)
+$ echo "Some content added" > feature.txt
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (ft/new-feature)
+$ git commit -m "Implemented core functionality for new feature"
+On branch ft/new-feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        feature.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (ft/new-feature)
+$ git add feature.txt
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF the next time Git touches it
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (ft/new-feature)
+$ git commit -m "Implemented core functionality for new feature"
+[ft/new-feature aacccee] Implemented core functionality for new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
 ```
