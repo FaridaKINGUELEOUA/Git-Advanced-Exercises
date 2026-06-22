@@ -242,4 +242,21 @@ $ git log --oneline
 eae3eed (HEAD -> main) Create third and fourth files
 bd3e666 chore: Create initial and second files
 07725c6 (origin/main, origin/HEAD) Initial commit
+
+7. Reordering commits history
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git rebase -i HEAD~2
+Successfully rebased and updated refs/heads/main.
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git log
+commit 1a6cdf5540e71b155fc8c1da683fd20332d00389 (HEAD -> main)
+Author: Nettie Farida <fanekingue@gmail.com>
+Date:   Fri Jun 19 14:59:43 2026 +0200
+
+    chore: Create initial and second files
+
+commit 1e55bc41c74edbd562576543d6beb5bb253f35ba
+Author: Nettie Farida <fanekingue@gmail.com>
+Date:   Fri Jun 19 15:38:06 2026 +0200
 ```
