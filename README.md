@@ -205,4 +205,41 @@ $ git log --oneline
 eae3eed (HEAD -> main) Create third and fourth files
 bd3e666 chore: Create initial and second files
 07725c6 (origin/main, origin/HEAD) Initial commit
+
+6. Dropping commits
+Nettie King@Nettie-Win MINGW64 ~
+$ cd Git-Advanced-Exercises
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ touch unwanted.txt
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ echo "Some content" > unwanted.txt
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git add unwanted.txt
+warning: in the working copy of 'unwanted.txt', LF will be replaced by CRLF the next time Git touches it
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git commit -m "Unwanted commit"
+[main ef6a0a7] Unwanted commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 unwanted.txt
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git log --oneline
+ef6a0a7 (HEAD -> main) Unwanted commit
+eae3eed Create third and fourth files
+bd3e666 chore: Create initial and second files
+07725c6 (origin/main, origin/HEAD) Initial commit
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git rebase -i HEAD~1
+Successfully rebased and updated refs/heads/main.
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git log --oneline
+eae3eed (HEAD -> main) Create third and fourth files
+bd3e666 chore: Create initial and second files
+07725c6 (origin/main, origin/HEAD) Initial commit
 ```
