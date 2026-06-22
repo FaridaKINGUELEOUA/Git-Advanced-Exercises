@@ -259,4 +259,64 @@ Date:   Fri Jun 19 14:59:43 2026 +0200
 commit 1e55bc41c74edbd562576543d6beb5bb253f35ba
 Author: Nettie Farida <fanekingue@gmail.com>
 Date:   Fri Jun 19 15:38:06 2026 +0200
+
+8. Cherry-picking commits
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git switch -c ft/branch
+Switched to a new branch 'ft/branch'
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (ft/branch)
+$ echo "Implemented test 5" >test5.md
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (ft/branch)
+$ git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git log --oneline ft/branch
+1a6cdf5 (HEAD -> main, ft/branch) chore: Create initial and second files
+1e55bc4 Create third and fourth files
+07725c6 (origin/main, origin/HEAD) Initial commit
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git switch ft/branch
+Switched to branch 'ft/branch'
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (ft/branch)
+$ git log --oneline
+1a6cdf5 (HEAD -> ft/branch, main) chore: Create initial and second files
+1e55bc4 Create third and fourth files
+07725c6 (origin/main, origin/HEAD) Initial commit
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (ft/branch)
+$ git add test5.md
+warning: in the working copy of 'test5.md', LF will be replaced by CRLF the next time Git touches it
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (ft/branch)
+$ git commit -m "Implemented test 5"
+[ft/branch 9d33e94] Implemented test 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (ft/branch)
+$ git log --oneline
+9d33e94 (HEAD -> ft/branch) Implemented test 5
+1a6cdf5 (main) chore: Create initial and second files
+1e55bc4 Create third and fourth files
+07725c6 (origin/main, origin/HEAD) Initial commit
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (ft/branch)
+$ git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git cherry-pick 9d33e94 
+[main 8cf54d9] Implemented test 5
+ Date: Mon Jun 22 13:52:28 2026 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
 ```
