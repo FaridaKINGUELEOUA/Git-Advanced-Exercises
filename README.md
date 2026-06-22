@@ -567,4 +567,40 @@ Or undo this operation with:
 Turn off this advice by setting config variable advice.detachedHead to false
 
 HEAD is now at d77a19b Updated project readme
+
+Part 3: Advanced Workflows (10+ Challenges)
+1. Stashing Changes
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git stash
+No local changes to save
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ echo "Stash test" >>readme.txt
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git stash
+warning: in the working copy of 'readme.txt', LF will be replaced by CRLF the next time Git touches it
+Saved working directory and index state WIP on main: 4a2ebfb Merge branch 'ft/new-branch-from-commit'
+
+2. Retrieving stashed changes
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git stash list
+stash@{0}: WIP on main: 4a2ebfb Merge branch 'ft/new-branch-from-commit'
+
+Nettie King@Nettie-Win MINGW64 ~/Git-Advanced-Exercises (main)
+$ git stash pop
+On branch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (ca95169b030599026c8f33a9d87fca3a04524bb3)
+
+3.Branch Merging Conflicts (Continued)
+Branch Merging Conflicts (Continued)
 ```
